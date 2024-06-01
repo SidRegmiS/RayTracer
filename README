@@ -1,3 +1,10 @@
-#PERSONAL RAYSTRACER 
+PERSONAL RAYSTRACER 
 
-FOR GENERATING IMAGES USING RAYTRACING TECHNIQURES
+FOR GENERATING IMAGES USING RAYTRACING techniques.
+
+
+You can add or remove stuff in main.c (lines 516 - 537) and change number of tianlges and sphere in the image in line 312-315.
+
+SEE refernce.png for example output.
+
+edit main.c for adding objects. 

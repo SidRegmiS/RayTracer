@@ -143,7 +143,7 @@ void crossProduct(const float vector[3], const float vector2[3], float out[3]){
 
 
 
-
+//to get when a ray intersects with sphere. 
 RayHit sphereIntersection(Ray *ray, Sphere *sphere){
     RayHit rayHit = {.time = -1, .intersectLocation = {0,0,0}, .normal = {0,0,0}};
 
@@ -216,6 +216,7 @@ RayHit sphereIntersection(Ray *ray, Sphere *sphere){
     return rayHit;
 }
 
+//for when a ray hits a triangle.
 RayHit triangleIntersect(Ray *ray, Triangle *triangle){
     RayHit  rayHit = {.time = -1};
 
@@ -308,13 +309,14 @@ RayHit triangleIntersect(Ray *ray, Triangle *triangle){
     return rayHit;
 }
 
-
+//edit number of spheres and tirables here
 int numberOfSpheres = 3;
 int numberOfTriangles = 5;
 
 Sphere *Spheres;
 Triangle  *Triangles;
 
+//finding the closest intersects.
 RayHit closestIntersects(Ray rayShot){
     RayHit rayHit = {.time = -1};
     int z, first = 0;
@@ -513,6 +515,7 @@ void getColor(RayHit rayHit, float *color, Ray incomingRay){
 
 int main() {
 
+//edit objecst here (dont change above)
     //creating objects
     Spheres = (Sphere *)malloc(sizeof(Sphere) * numberOfSpheres);
     Triangles = (Triangle *)malloc(sizeof(Triangle) * numberOfTriangles);
@@ -535,7 +538,7 @@ int main() {
 // right red triangle
     Triangles[4] = (Triangle) { .v = { { 8,-2,-20 }, {8,-2,-10}, {8,10,-20}}, .mat = red };
     numberOfTriangles = 5;
-
+//end (dont change blow)
 
 
     int totalPixels = height * width * channels;
